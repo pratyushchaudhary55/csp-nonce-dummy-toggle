@@ -3,7 +3,7 @@
 import { unstable_SuspenseList } from "react"
 
 const untrustedUserContent = `
-  <p>Nice post! <img src="x" onerror="
+  <p>Nice post! <img src="https://static.vecteezy.com/system/resources/thumbnails/017/441/736/small/reputation-icon-thumbs-up-and-rays-customer-review-icon-quality-evaluation-feedback-isolated-illustration-vector.jpg" onerror="
     (function () {
       var msg = 'Experiment C ran (injected img onerror handler fired)';
       console.log('%c[C] ' + msg, 'color: red');

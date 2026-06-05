@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import ExperimentA from "./components/ExperimentA";
 import ExperimentB from "./components/ExperimentB";
 import ExperimentC from "./components/ExperimentC";
+import ExperimentD from "./components/ExperimentD";
 
 export default async function Page() {
   const nonce = (await headers()).get('x-nonce') ?? '' 
@@ -16,11 +17,11 @@ export default async function Page() {
 
       <hr />
 
-      {/* The three experiments */}
-      
+      {/* The four experiments */}
       <ExperimentA />
       <ExperimentB />
       <ExperimentC />
+      <ExperimentD />
     </div>
   )
 }

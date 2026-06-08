@@ -1,10 +1,12 @@
 import { InjectHtml } from "./InjectHTML";
+import { headers } from "next/headers";
 
-export default function ExperimentD() {
+export default async function ExperimentD() {
+    const nonce = (await headers()).get('x-nonce') ?? '';
     // simulating the page.properties.customCode payload from the platform
     const customCode = {
         header: `
-            <script>
+            <script nonce=${nonce}>
                 var msg = 'Experiment D ran (Injected customCode inline script)';
                 console.log('%c[D - Header] ' + msg, 'color: orange');
             </script>
